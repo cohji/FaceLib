@@ -12,6 +12,11 @@
 		0F7A8E841E93DBBE006F83BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A8E821E93DBBE006F83BF /* Main.storyboard */; };
 		0F7A8E861E93DBBE006F83BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A8E851E93DBBE006F83BF /* Assets.xcassets */; };
 		0F7A8E891E93DBBE006F83BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A8E871E93DBBE006F83BF /* LaunchScreen.storyboard */; };
+		0F7A8E911E93E01F006F83BF /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A8E901E93E01F006F83BF /* test.swift */; };
+		0F7A8E941E93E0FF006F83BF /* FaceLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A8E931E93E0FF006F83BF /* FaceLib.mm */; };
+		0F7A8E971E93E28A006F83BF /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7A8E961E93E28A006F83BF /* libdlib.a */; };
+		0F7A8E991E93E2A4006F83BF /* shape_predictor_68_face_landmarks.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0F7A8E981E93E2A4006F83BF /* shape_predictor_68_face_landmarks.dat */; };
+		5C6DE98A15272A4CEB9DF5A2 /* Pods_FaceLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D5C5C0DABAD7E58509905E /* Pods_FaceLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,15 @@
 		0F7A8E851E93DBBE006F83BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F7A8E881E93DBBE006F83BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F7A8E8A1E93DBBE006F83BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7A8E901E93E01F006F83BF /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		0F7A8E921E93E0FF006F83BF /* FaceLib-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceLib-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F7A8E931E93E0FF006F83BF /* FaceLib.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceLib.mm; sourceTree = "<group>"; };
+		0F7A8E951E93E114006F83BF /* FaceLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceLib.h; sourceTree = "<group>"; };
+		0F7A8E961E93E28A006F83BF /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdlib.a; path = lib/libdlib.a; sourceTree = "<group>"; };
+		0F7A8E981E93E2A4006F83BF /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = shape_predictor_68_face_landmarks.dat; path = lib/shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
+		B5D5C5C0DABAD7E58509905E /* Pods_FaceLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6DA6F6D84C275F1709F5E08 /* Pods-FaceLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceLib/Pods-FaceLib.release.xcconfig"; sourceTree = "<group>"; };
+		E9E809E6BA020AA1621757B1 /* Pods-FaceLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceLib/Pods-FaceLib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7A8E971E93E28A006F83BF /* libdlib.a in Frameworks */,
+				5C6DE98A15272A4CEB9DF5A2 /* Pods_FaceLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +56,8 @@
 			children = (
 				0F7A8E7D1E93DBBE006F83BF /* FaceLib */,
 				0F7A8E7C1E93DBBE006F83BF /* Products */,
+				EBEB4E9257510B3242667D1C /* Pods */,
+				EDED5129D0A5B7583715B1C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +72,37 @@
 		0F7A8E7D1E93DBBE006F83BF /* FaceLib */ = {
 			isa = PBXGroup;
 			children = (
+				0F7A8E981E93E2A4006F83BF /* shape_predictor_68_face_landmarks.dat */,
+				0F7A8E961E93E28A006F83BF /* libdlib.a */,
 				0F7A8E7E1E93DBBE006F83BF /* AppDelegate.swift */,
 				0F7A8E801E93DBBE006F83BF /* ViewController.swift */,
 				0F7A8E821E93DBBE006F83BF /* Main.storyboard */,
 				0F7A8E851E93DBBE006F83BF /* Assets.xcassets */,
 				0F7A8E871E93DBBE006F83BF /* LaunchScreen.storyboard */,
 				0F7A8E8A1E93DBBE006F83BF /* Info.plist */,
+				0F7A8E901E93E01F006F83BF /* test.swift */,
+				0F7A8E931E93E0FF006F83BF /* FaceLib.mm */,
+				0F7A8E921E93E0FF006F83BF /* FaceLib-Bridging-Header.h */,
+				0F7A8E951E93E114006F83BF /* FaceLib.h */,
 			);
 			path = FaceLib;
+			sourceTree = "<group>";
+		};
+		EBEB4E9257510B3242667D1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9E809E6BA020AA1621757B1 /* Pods-FaceLib.debug.xcconfig */,
+				E6DA6F6D84C275F1709F5E08 /* Pods-FaceLib.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDED5129D0A5B7583715B1C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5D5C5C0DABAD7E58509905E /* Pods_FaceLib.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F7A8E8D1E93DBBE006F83BF /* Build configuration list for PBXNativeTarget "FaceLib" */;
 			buildPhases = (
+				CEC24AB96204F834D7A68FB9 /* [CP] Check Pods Manifest.lock */,
 				0F7A8E771E93DBBD006F83BF /* Sources */,
 				0F7A8E781E93DBBD006F83BF /* Frameworks */,
 				0F7A8E791E93DBBD006F83BF /* Resources */,
+				2FC90DA0131CFA1A5963709E /* [CP] Embed Pods Frameworks */,
+				60F839BE36D5B7F4A7ECB62D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +141,7 @@
 					0F7A8E7A1E93DBBD006F83BF = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = UQ99UGF79Y;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,10 +172,59 @@
 				0F7A8E891E93DBBE006F83BF /* LaunchScreen.storyboard in Resources */,
 				0F7A8E861E93DBBE006F83BF /* Assets.xcassets in Resources */,
 				0F7A8E841E93DBBE006F83BF /* Main.storyboard in Resources */,
+				0F7A8E991E93E2A4006F83BF /* shape_predictor_68_face_landmarks.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FC90DA0131CFA1A5963709E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceLib/Pods-FaceLib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F839BE36D5B7F4A7ECB62D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceLib/Pods-FaceLib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEC24AB96204F834D7A68FB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F7A8E771E93DBBD006F83BF /* Sources */ = {
@@ -138,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F7A8E811E93DBBE006F83BF /* ViewController.swift in Sources */,
+				0F7A8E911E93E01F006F83BF /* test.swift in Sources */,
+				0F7A8E941E93E0FF006F83BF /* FaceLib.mm in Sources */,
 				0F7A8E7F1E93DBBE006F83BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +300,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/FaceLib/lib";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/FaceLib/lib";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -247,7 +345,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/FaceLib/lib";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/FaceLib/lib";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -257,26 +357,61 @@
 		};
 		0F7A8E8E1E93DBBE006F83BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9E809E6BA020AA1621757B1 /* Pods-FaceLib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = UQ99UGF79Y;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					DLIB_JPEG_SUPPORT,
+					DLIB_NO_GUI_SUPPORT,
+					NDEBUG,
+					DLIB_USE_BLAS,
+					NO_MAKEFILE,
+					DLIB_JPEG_STATIC,
+				);
 				INFOPLIST_FILE = FaceLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceLib/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.szki.FaceLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceLib/FaceLib-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		0F7A8E8F1E93DBBE006F83BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DA6F6D84C275F1709F5E08 /* Pods-FaceLib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = UQ99UGF79Y;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					DLIB_JPEG_SUPPORT,
+					DLIB_NO_GUI_SUPPORT,
+					NDEBUG,
+					DLIB_USE_BLAS,
+					NO_MAKEFILE,
+					DLIB_JPEG_STATIC,
+				);
 				INFOPLIST_FILE = FaceLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceLib/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.szki.FaceLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceLib/FaceLib-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -300,6 +435,7 @@
 				0F7A8E8F1E93DBBE006F83BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
